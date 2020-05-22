@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AsyncTaskProgress1", "AsyncIProgress\AsyncTaskProgress1.vbproj", "{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ReadingDelimitedFiles", "ReadingDelimitedFiles\ReadingDelimitedFiles.vbproj", "{04056508-2008-41C1-BF3C-2B2267EAB3AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{F889BA1E-9A12-4EB7-928A-4E7AB7313F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F889BA1E-9A12-4EB7-928A-4E7AB7313F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F889BA1E-9A12-4EB7-928A-4E7AB7313F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAAD1E4-D25C-46D4-AAB7-14646D346BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04056508-2008-41C1-BF3C-2B2267EAB3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04056508-2008-41C1-BF3C-2B2267EAB3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04056508-2008-41C1-BF3C-2B2267EAB3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04056508-2008-41C1-BF3C-2B2267EAB3AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
