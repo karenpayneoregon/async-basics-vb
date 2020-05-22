@@ -5,7 +5,7 @@ Namespace Classes
     Public Class FileOperations
         Private ReadOnly _fileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
         Public Event OnMonitor As DelegatesModule.MonitorHandler
-        Public Async Function ReadFileAndPopulateDataGridView(token As CancellationToken) As Task
+        Public Async Function ReadFile(token As CancellationToken) As Task
             Dim lineIndex = 1
 
             Dim currentLine As String

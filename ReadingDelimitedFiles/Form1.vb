@@ -21,11 +21,10 @@ Public Class Form1
             _cancellationTokenSource = New CancellationTokenSource()
         End If
 
-
         Try
             Dim operation = New FileOperations
             AddHandler operation.OnMonitor, AddressOf MonitorProgress
-            Await operation.ReadFileAndPopulateDataGridView(_cancellationTokenSource.Token)
+            Await operation.ReadFile(_cancellationTokenSource.Token)
         Catch oce As OperationCanceledException
             '
             ' Land here from token.ThrowIfCancellationRequested()
