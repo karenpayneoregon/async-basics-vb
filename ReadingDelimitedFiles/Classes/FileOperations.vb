@@ -7,7 +7,7 @@ Namespace Classes
         Public Event OnMonitor As DelegatesModule.MonitorHandler
         Public Async Function ReadFile(token As CancellationToken) As Task
             Dim lineIndex = 1
-
+            'cn.Open
             Dim currentLine As String
 
             Using reader As StreamReader = File.OpenText(_fileName)
