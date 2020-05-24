@@ -4,6 +4,7 @@ This repository contains very simple/basic examples for working with asynchronou
 
 By following the basics will allow a developer to expand on the basics to use in every day programming task. Way too many times developers will attempt to use asynchronous operations in complex task and fail because they have not mastered the basics which is the intent here.
 
+
 More code samples will be added over time.
 
 #### Microsoft TechNet article
@@ -15,5 +16,10 @@ TBA
 >
 >Asynchrony proves especially valuable for applications that access the UI thread because all UI-related activity usually shares one thread. If any process is blocked in a synchronous application, all are blocked. Your application stops responding, and you might conclude that it has failed when instead it's just waiting.
 >
->When you use asynchronous methods, the application continues to respond to the UI. You can resize or minimize a window, for example, or you can close the application if you don't want to wait for it to finish.
+>When you use asynchronous methods, the application continues to respond to the UI. You can resize or minimize a window, for example, or you can close the application
+> if you don't want to wait for it to finish.
+
+#### Requires
+
+[BaseConnectionLibrary](https://www.nuget.org/packages/BaseConnectionLibrary/) from NuGet for project CopyFileAsync. This means before running the project CopyFileAsync perform a Nuget Restore packages. The library has [full source](https://github.com/karenpayneoregon/BaseConnectionsVisualBasicNet). 
 

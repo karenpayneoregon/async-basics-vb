@@ -6,11 +6,15 @@ Namespace Extensions
         ''' <summary>
         ''' Copy a file async via open streams
         ''' </summary>
-        ''' <param name="source"></param>
-        ''' <param name="destination"></param>
-        ''' <param name="bufferSize"></param>
-        ''' <param name="progress"></param>
+        ''' <param name="source">Current open stream for file to copy</param>
+        ''' <param name="destination">Current open stream for destination file</param>
+        ''' <param name="bufferSize">Buffer size for reading</param>
+        ''' <param name="progress">Action to report progress</param>
         ''' <returns></returns>
+        ''' <remarks>
+        ''' Buffer size should be adjusted according to your needs and could be
+        ''' a calculated number per file
+        ''' </remarks>
         <Extension>
         Public Async Function CopyToWithProgressAsync(
             source As Stream,
@@ -19,7 +23,7 @@ Namespace Extensions
             Optional ByVal progress As Action(Of Integer) = Nothing) As Task
 
             Dim buffer = New Byte(bufferSize - 1) {}
-            Dim total = 0 '0L
+            Dim total = 0
             Dim amountRead As Integer
 
             Do
