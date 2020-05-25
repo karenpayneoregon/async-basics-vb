@@ -15,6 +15,10 @@ See the following [GitHub repository](https://github.com/karenpayneoregon/ef-cor
 #### Microsoft TechNet article
 TBA
 
+#### Asynchronous programming
+
+Must read even thought it's C# ([From Microsoft](https://docs.microsoft.com/en-us/dotnet/csharp/async))
+
 #### Async improves responsiveness
 ([From Microsoft](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/concepts/async/))
 >Asynchrony is essential for activities that are potentially blocking, such as when your application accesses the web. Access to a web resource sometimes is slow or delayed. If such an activity is blocked within a synchronous process, the entire application must wait. In an asynchronous process, the application can continue with other work that doesn't depend on the web resource until the potentially blocking task finishes.
