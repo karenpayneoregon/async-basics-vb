@@ -1,5 +1,6 @@
 ﻿
 Imports System.Text
+Imports ExtensionLibrary
 
 Public Class Form1
     Private Shared MainCounter As Integer = 0
@@ -29,7 +30,12 @@ Public Class Form1
         Return sum
 
     End Function
-
+    ''' <summary>
+    ''' Run two task using a C# wrapper to return a tuple for results
+    ''' of the task
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Async Sub RunButton_Click(sender As Object, e As EventArgs) Handles RunButton.Click
 
         RunButton.Enabled = False
@@ -41,15 +47,11 @@ Public Class Form1
         Dim stopwatch = New Stopwatch()
         stopwatch.Start()
 
-        ' this task will take about 2.5s to complete
-        Dim sumTask As Task(Of Integer) = SlowAndComplexSumAsync()
-
-        ' this task will take about 4s to complete
-        Dim wordTask As Task(Of String) = SlowAndComplexWordAsync()
+        Dim results As (Integer, String)
 
         ' running them in parallel should take about 4s to complete
         Try
-            Await Task.WhenAll(sumTask, wordTask)
+            results = Await TaskEx.WhenAll(SlowAndComplexSumAsync(), SlowAndComplexWordAsync())
         Finally
             RunButton.Enabled = True
         End Try
@@ -59,8 +61,8 @@ Public Class Form1
 
         ' These lines are to prove the outputs are as expected,
         ' i.e. 300 for the complex sum and "ABC...XYZ" for the complex word
-        sb.AppendLine("Result of complex sum = " & sumTask.Result)
-        sb.AppendLine("Result of complex letter processing " & wordTask.Result)
+        sb.AppendLine("Result of complex sum = " & results.Item1)
+        sb.AppendLine("Result of complex letter processing " & results.Item2)
 
         TextBox1.Text = sb.ToString()
 

@@ -119,5 +119,11 @@
     <None Include="App.config" />
     <None Include="readme.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExtensionLibrary\ExtensionLibrary.csproj">
+      <Project>{c887f8ec-598d-47ac-a86b-1023cedd7309}</Project>
+      <Name>ExtensionLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
