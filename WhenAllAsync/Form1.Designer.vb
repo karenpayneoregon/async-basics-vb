@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.RunButton = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.RunButton2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'RunButton
@@ -40,14 +41,25 @@ Partial Class Form1
         Me.TextBox1.Location = New System.Drawing.Point(12, 41)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox1.Size = New System.Drawing.Size(430, 93)
         Me.TextBox1.TabIndex = 1
+        '
+        'RunButton2
+        '
+        Me.RunButton2.Location = New System.Drawing.Point(93, 12)
+        Me.RunButton2.Name = "RunButton2"
+        Me.RunButton2.Size = New System.Drawing.Size(75, 23)
+        Me.RunButton2.TabIndex = 2
+        Me.RunButton2.Text = "Run 2"
+        Me.RunButton2.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(454, 164)
+        Me.Controls.Add(Me.RunButton2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.RunButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
@@ -61,4 +73,5 @@ Partial Class Form1
 
     Friend WithEvents RunButton As Button
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents RunButton2 As Button
 End Class
