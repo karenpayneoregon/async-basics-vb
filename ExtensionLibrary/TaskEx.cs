@@ -9,7 +9,7 @@ namespace ExtensionLibrary
     public static class TaskEx
     {
         /// <summary>
-        /// Wrapper for performing a WhenAll and return results of the awaited task.
+        /// C# Wrapper for performing WhenAll and return results of the awaited task.
         /// </summary>
         /// <typeparam name="T1"></typeparam>
         /// <typeparam name="T2"></typeparam>
@@ -18,7 +18,7 @@ namespace ExtensionLibrary
         /// <returns></returns>
         public static async Task<(T1, T2)> WhenAll<T1, T2>(Task<T1> task1, Task<T2> task2) => (await task1, await task2);
         /// <summary>
-        /// Wrapper for performing a WhenAll and return results of the awaited task.
+        /// C# Wrapper for performing WhenAll and return results of the awaited task.
         /// </summary>
         /// <typeparam name="T1"></typeparam>
         /// <typeparam name="T2"></typeparam>
@@ -29,7 +29,7 @@ namespace ExtensionLibrary
         /// <returns></returns>
         public static async Task<(T1, T2, T3)> WhenAll<T1, T2, T3>(Task<T1> task1, Task<T2> task2, Task<T3> task3) => (await task1, await task2, await task3);
         /// <summary>
-        /// Wrapper for performing a WhenAll and return results of the awaited task.
+        /// C# Wrapper for performing WhenAll and return results of the awaited task.
         /// </summary>
         /// <typeparam name="T1"></typeparam>
         /// <typeparam name="T2"></typeparam>

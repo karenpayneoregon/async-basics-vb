@@ -7,6 +7,11 @@ By following the basics will allow a developer to expand on the basics to use in
 
 More code samples will be added over time.
 
+#### Entity Framework Core 3 async
+
+See the following [GitHub repository](https://github.com/karenpayneoregon/ef-core-projections-vb) for code samples using async operations against SQL-Server.
+
+
 #### Microsoft TechNet article
 TBA
 
