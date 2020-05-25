@@ -2,12 +2,16 @@
 Imports CopyFileAsync.Classes
 
 Public Class Form1
-    Private Async Sub CopyFileButton_Click(sender As Object, e As EventArgs) Handles CopyFileButton.Click
+    Private Async Sub CopyFileButton_Click(sender As Object, e As EventArgs) _
+        Handles CopyFileButton.Click
 
         Dim operations As New FileOperations
 
-        Dim sourceFileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Names1.txt")
-        Dim destinationFileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Names2.txt")
+        Dim sourceFileName As String =
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Names1.txt")
+
+        Dim destinationFileName As String =
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Names2.txt")
 
         ProgressBar1.Maximum = CType(operations.GetFileBytes(sourceFileName), Integer)
 

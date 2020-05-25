@@ -17,13 +17,17 @@ Namespace Classes
             Try
 
                 Using writer As StreamWriter = File.CreateText(destinationFileName)
+
                 End Using
 
                 Using sourceFileSteam As Stream = File.Open(sourceFileName, FileMode.Open)
                     Using destinationFileSteam As FileStream = File.Open(destinationFileName, FileMode.Open)
-                        Await sourceFileSteam.CopyToWithProgressAsync(destinationFileSteam, 32768, Sub(percent)
-                                                                                                       Progress(percent)
-                                                                                                   End Sub)
+                        Await sourceFileSteam.CopyToWithProgressAsync(
+                            destinationFileSteam,
+                            32768,
+                            Sub(percent)
+                                Progress(percent)
+                            End Sub)
                     End Using
                 End Using
 

@@ -6,7 +6,8 @@ Imports WinFormsControlHelpers
 
 Public Class Form1
     Private waitFor As Integer = 2000
-    Private Sub BackGroundWorkerButton_Click(sender As Object, e As EventArgs) Handles BackGroundWorkerButton.Click
+    Private Sub BackGroundWorkerButton_Click(sender As Object, e As EventArgs) _
+        Handles BackGroundWorkerButton.Click
 
         Dim bgw = New BackgroundWorker()
 
@@ -14,9 +15,7 @@ Public Class Form1
             Sub()
 
                 Thread.Sleep(waitFor)
-                'Label1.Text = "1"
-                GeneralResultsLabel.InvokeIfRequired(Sub(lb) lb.Text = "Success from background worker")
-
+                GeneralResultsLabel.Invoke(New MethodInvoker(Sub() GeneralResultsLabel.Text = "Success from background worker"))
             End Sub
 
         AddHandler bgw.RunWorkerCompleted,
@@ -56,8 +55,8 @@ Public Class Form1
 
                 Thread.Sleep(waitFor)
 
-                GeneralResultsLabel.InvokeIfRequired(Sub(label) label.Text = "Success from Button3 first")
-                TextBox1.InvokeIfRequired(Sub(textBox) textBox.Text = "Success from Button3 first")
+                GeneralResultsLabel.InvokeIfRequired(Sub(label) label.Text = "Success from TaskRunInvokeButton first")
+                TextBox1.InvokeIfRequired(Sub(textBox) textBox.Text = "Success from TaskRunInvokeButton first")
 
             End Sub)
 
@@ -69,11 +68,7 @@ Public Class Form1
 
                 Thread.Sleep(waitFor)
 
-                If GeneralResultsLabel.InvokeRequired Then
-                    GeneralResultsLabel.Invoke(Sub() GeneralResultsLabel.Text = "Success from Button3 second")
-                Else
-                    GeneralResultsLabel.Text = "Success from Button3 second"
-                End If
+                GeneralResultsLabel.Invoke(New MethodInvoker(Sub() GeneralResultsLabel.Text = "Success from TaskRunInvokeButton second"))
 
                 '
                 ' We can do better, see below commented code
@@ -84,7 +79,7 @@ Public Class Form1
                 '    TextBox1.Text = "Success from Button3 second"
                 'End If
 
-                TextBox1.Invoke(New MethodInvoker(Sub() TextBox1.Text = "Success from Button3 second"))
+                TextBox1.Invoke(New MethodInvoker(Sub() TextBox1.Text = "Success from TaskRunInvokeButton second"))
 
             End Sub)
 

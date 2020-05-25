@@ -12,8 +12,8 @@ More code samples will be added over time.
 See the following [GitHub repository](https://github.com/karenpayneoregon/ef-core-projections-vb) for code samples using async operations against SQL-Server.
 
 
-#### Microsoft TechNet article
-TBA
+[Microsoft TechNet article](https://social.technet.microsoft.com/wiki/contents/articles/53895.basic-asynchronous-operations-vb-net.aspx)
+
 
 #### Asynchronous programming
 

@@ -43,7 +43,7 @@ Namespace Extensions
                     '
                     ' Only for demonstrating, remove for your code
                     '
-                    Await Task.Delay(200)
+                    Await Task.Delay(1000)
 
                 Loop
 
