@@ -1,10 +1,12 @@
 ﻿Imports System.ComponentModel
+Imports System.Net.Http
+Imports System.Text.RegularExpressions
 Imports System.Threading
 Imports WinFormsControlHelpers
 
 Public Class Form1
     Private waitFor As Integer = 2000
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BackGroundWorkerButton_Click(sender As Object, e As EventArgs) Handles BackGroundWorkerButton.Click
 
         Dim bgw = New BackgroundWorker()
 
@@ -13,7 +15,7 @@ Public Class Form1
 
                 Thread.Sleep(waitFor)
                 'Label1.Text = "1"
-                Label1.InvokeIfRequired(Sub(lb) lb.Text = "Success from background worker")
+                GeneralResultsLabel.InvokeIfRequired(Sub(lb) lb.Text = "Success from background worker")
 
             End Sub
 
@@ -30,13 +32,13 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Async Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Async Sub CrossThreadButton_Click(sender As Object, e As EventArgs) Handles CrossThreadButton.Click
 
         Await Task.Run(
             Sub()
 
                 Thread.Sleep(waitFor)
-                Label1.Text = "Oh this is not going to work :-("
+                GeneralResultsLabel.Text = "Oh this is not going to work :-("
 
             End Sub)
 
@@ -48,13 +50,13 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Async Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Async Sub TaskRunInvokeButton_Click(sender As Object, e As EventArgs) Handles TaskRunInvokeButton.Click
         Await Task.Run(
             Sub()
 
                 Thread.Sleep(waitFor)
 
-                Label1.InvokeIfRequired(Sub(label) label.Text = "Success from Button3 first")
+                GeneralResultsLabel.InvokeIfRequired(Sub(label) label.Text = "Success from Button3 first")
                 TextBox1.InvokeIfRequired(Sub(textBox) textBox.Text = "Success from Button3 first")
 
             End Sub)
@@ -67,10 +69,10 @@ Public Class Form1
 
                 Thread.Sleep(waitFor)
 
-                If Label1.InvokeRequired Then
-                    Label1.Invoke(Sub() Label1.Text = "Success from Button3 second")
+                If GeneralResultsLabel.InvokeRequired Then
+                    GeneralResultsLabel.Invoke(Sub() GeneralResultsLabel.Text = "Success from Button3 second")
                 Else
-                    Label1.Text = "Success from Button3 second"
+                    GeneralResultsLabel.Text = "Success from Button3 second"
                 End If
 
                 '
@@ -89,7 +91,30 @@ Public Class Form1
 
     End Sub
 
+    Private ReadOnly _httpClient As New HttpClient()
+    ''' <summary>
+    ''' Adapted from Microsoft code sample
+    ''' https://docs.microsoft.com/en-us/dotnet/csharp/async
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Async Sub WebExampleButton_Click(sender As Object, e As EventArgs) Handles WebExampleButton.Click
+        WebResultLabel.Invoke(New MethodInvoker(Sub() WebResultLabel.Text = "Working..."))
+        Await Task.Delay(500)
+        Dim count = Await GetDotNetCount()
+        WebResultLabel.Invoke(New MethodInvoker(Sub() WebResultLabel.Text = $"Count of time .NET appears {count}"))
+    End Sub
+    Public Async Function GetDotNetCount() As Task(Of Integer)
+        ' Suspends GetDotNetCount() to allow the caller (the web server)
+        ' to accept another request, rather than blocking on this one.
+        Dim html = Await _httpClient.GetStringAsync("https://dotnetfoundation.org")
+
+        Return Regex.Matches(html, "\.NET").Count
+    End Function
+
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Label1.Text = ""
+        GeneralResultsLabel.Text = ""
+        WebResultLabel.Text = ""
     End Sub
 End Class
+
