@@ -40,6 +40,7 @@ Public Class Form1
         Try
 
             Dim resultValue = Await ops.Run(_totalIterations, _cancellationTokenSource.Token)
+            MessageBox.Show($"resultValue = {resultValue}")
 
         Catch oce As OperationCanceledException
             '

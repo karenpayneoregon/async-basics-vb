@@ -4,10 +4,10 @@ Imports System.Threading
 Namespace Classes
     Public Class FileOperations
         Private ReadOnly _fileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
-        Public Event OnMonitor As DelegatesModule.MonitorHandler
+        Public Event OnReadLine As DelegatesSignatures.OnReadLine
         Public Async Function ReadFile(token As CancellationToken) As Task
             Dim lineIndex = 1
-            'cn.Open
+
             Dim currentLine As String
 
             Using reader As StreamReader = File.OpenText(_fileName)
@@ -29,9 +29,10 @@ Namespace Classes
                             .EmailAddress = parts(7)
                             }
 
-                    OnMonitorEvent?.Invoke(New MonitorArgs(person.FieldArray(), lineIndex))
+                    OnReadLineEvent?.Invoke(New NewLineArgs(person.FieldArray(), lineIndex))
 
                     lineIndex += 1
+
                     Await Task.Delay(1, token)
 
                     If token.IsCancellationRequested Then

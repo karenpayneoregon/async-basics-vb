@@ -23,7 +23,7 @@ Public Class Form1
 
         Try
             Dim operation = New FileOperations
-            AddHandler operation.OnMonitor, AddressOf MonitorProgress
+            AddHandler operation.OnReadLine, AddressOf OnReadLine
             Await operation.ReadFile(_cancellationTokenSource.Token)
         Catch oce As OperationCanceledException
             '
@@ -46,7 +46,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub MonitorProgress(args As MonitorArgs)
+    Private Sub OnReadLine(args As NewLineArgs)
         DataGridView1.Rows.Add(args.PersonArray)
         StatusLabel.Text = $"Reading line {args.CurrentIndex}"
     End Sub

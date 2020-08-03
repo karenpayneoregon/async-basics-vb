@@ -73,9 +73,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\DelegatesModule.vb" />
+    <Compile Include="Classes\DelegatesSignatures.vb" />
     <Compile Include="Classes\FileOperations.vb" />
-    <Compile Include="Classes\MonitorArgs.vb" />
+    <Compile Include="Classes\NewLineArgs.vb" />
     <Compile Include="Classes\Person.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>

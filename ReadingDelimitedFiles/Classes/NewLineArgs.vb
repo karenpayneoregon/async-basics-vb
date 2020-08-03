@@ -1,5 +1,5 @@
 ﻿Namespace Classes
-    Public Class MonitorArgs
+    Public Class NewLineArgs
         Inherits EventArgs
 
         Public Sub New(personDataArray As String(), currentLineIndex As Integer)

@@ -14,7 +14,7 @@
 
             Do While currentIndex <= value - 1
 
-                OnMonitorEvent?.Invoke(New MonitorArgs("Working", currentIndex))
+                OnMonitorEvent?.Invoke(New MonitorArgs(Nothing, currentIndex))
 
                 currentIndex += 1
 

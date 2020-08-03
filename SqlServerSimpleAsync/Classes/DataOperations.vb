@@ -63,9 +63,5 @@ FROM Customers AS Cust
      INNER JOIN Countries ON Cust.CountryIdentifier = Countries.CountryIdentifier
                </SQL>.Value
         End Function
-
-
-
-
     End Class
 End Namespace
