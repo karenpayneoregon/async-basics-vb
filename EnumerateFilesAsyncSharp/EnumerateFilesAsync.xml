@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EnumerateFilesAsync</name>
+    </assembly>
+    <members>
+        <member name="M:EnumerateFilesAsync.Form1.IterateFolders(EnumerateFilesAsync.Classes.Classes.MonitorProgressArgs)">
+            <summary>
+            Show current file on each iteration along
+            with if there were permission issues reading.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:EnumerateFilesAsync.Form1.CancelButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cancel operation
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:EnumerateFilesAsync.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EnumerateFilesAsync.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EnumerateFilesAsync.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

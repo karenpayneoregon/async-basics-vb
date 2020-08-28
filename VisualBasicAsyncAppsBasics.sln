@@ -29,6 +29,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MiscExamples", "MiscExample
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WinFormsControlHelpers", "WinFormsControlHelpers\WinFormsControlHelpers.vbproj", "{6BEFB783-BFAF-4BEF-8AA0-375126EC5BB4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{71172C2D-2B6D-404F-B34C-D4544072BEAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumerateFilesAsync_csharp", "EnumerateFilesAsyncSharp\EnumerateFilesAsync_csharp.csproj", "{7B170631-1ABC-455F-82DF-EE746EF35192}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,9 +79,16 @@ Global
 		{6BEFB783-BFAF-4BEF-8AA0-375126EC5BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BEFB783-BFAF-4BEF-8AA0-375126EC5BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BEFB783-BFAF-4BEF-8AA0-375126EC5BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B170631-1ABC-455F-82DF-EE746EF35192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B170631-1ABC-455F-82DF-EE746EF35192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B170631-1ABC-455F-82DF-EE746EF35192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B170631-1ABC-455F-82DF-EE746EF35192}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B170631-1ABC-455F-82DF-EE746EF35192} = {71172C2D-2B6D-404F-B34C-D4544072BEAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C99DE29-9097-4445-BAA7-D155C91EECD4}

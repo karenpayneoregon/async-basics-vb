@@ -3,8 +3,17 @@ Imports System.Threading
 
 Namespace Classes
     Public Class FileOperations
+        ''' <summary>
+        ''' Text file to work with
+        ''' </summary>
         Private ReadOnly _fileName As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt")
+
         Public Event OnReadLine As DelegatesSignatures.OnReadLine
+        ''' <summary>
+        ''' Read file with the ability to cancel the operation
+        ''' </summary>
+        ''' <param name="token">CancellationToken created in the calling form</param>
+        ''' <returns>Nothing</returns>
         Public Async Function ReadFile(token As CancellationToken) As Task
             Dim lineIndex = 1
 
