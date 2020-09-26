@@ -131,6 +131,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="readme.md" />
     <None Include="Resources\Kitty.gif" />
   </ItemGroup>
   <ItemGroup>
