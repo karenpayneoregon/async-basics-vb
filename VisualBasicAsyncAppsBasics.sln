@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{71172C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumerateFilesAsync_csharp", "EnumerateFilesAsyncSharp\EnumerateFilesAsync_csharp.csproj", "{7B170631-1ABC-455F-82DF-EE746EF35192}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SplashFormExample", "SplashFormExample\SplashFormExample.vbproj", "{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{7B170631-1ABC-455F-82DF-EE746EF35192}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B170631-1ABC-455F-82DF-EE746EF35192}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B170631-1ABC-455F-82DF-EE746EF35192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,14 +2,6 @@
 Imports System.Windows.Forms
 
 Public Module ControlExtensions
-    '<Extension>
-    'Public Sub InvokeIfRequired(control As Control, action As Action(Of Control))
-    '    If control.InvokeRequired Then
-    '        control.Invoke(New Action(Sub() action(control)))
-    '    Else
-    '        action(control)
-    '    End If
-    'End Sub
     <Extension>
     Public Function InvokeIfRequired(Of T As Control)(control As T, action As Action(Of T)) As IAsyncResult
 
