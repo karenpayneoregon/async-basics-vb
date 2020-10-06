@@ -7,7 +7,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AsynchronousCancellationTok
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5C9FCB16-C38B-45D7-9A90-2768E21D34D3}"
 	ProjectSection(SolutionItems) = preProject
-		..\EntityFrameworkCoreProjectsVisualBasic\DataScripts.sql = ..\EntityFrameworkCoreProjectsVisualBasic\DataScripts.sql
 		readme.md = readme.md
 	EndProjectSection
 EndProject
