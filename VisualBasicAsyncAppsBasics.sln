@@ -34,6 +34,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumerateFilesAsync_csharp"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SplashFormExample", "SplashFormExample\SplashFormExample.vbproj", "{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forum questions", "Forum questions", "{92FF1F19-817F-4D05-926D-58F32D55A56B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FillDataTableAsync", "FillDataTableAsync\FillDataTableAsync.vbproj", "{501BE05E-68EF-4AE0-9A5B-38FFFC3C4A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,12 +92,17 @@ Global
 		{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1065E2CE-F5D0-4989-84DD-D613D38B5FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501BE05E-68EF-4AE0-9A5B-38FFFC3C4A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501BE05E-68EF-4AE0-9A5B-38FFFC3C4A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501BE05E-68EF-4AE0-9A5B-38FFFC3C4A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501BE05E-68EF-4AE0-9A5B-38FFFC3C4A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7B170631-1ABC-455F-82DF-EE746EF35192} = {71172C2D-2B6D-404F-B34C-D4544072BEAF}
+		{501BE05E-68EF-4AE0-9A5B-38FFFC3C4A01} = {92FF1F19-817F-4D05-926D-58F32D55A56B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C99DE29-9097-4445-BAA7-D155C91EECD4}
