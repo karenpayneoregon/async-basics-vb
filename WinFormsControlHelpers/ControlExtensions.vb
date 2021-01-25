@@ -1,29 +1,16 @@
-﻿Imports System.Runtime.CompilerServices
+﻿Imports System.ComponentModel
+Imports System.Runtime.CompilerServices
 Imports System.Windows.Forms
 
 Public Module ControlExtensions
-    <Extension>
-    Public Function InvokeIfRequired(Of T As Control)(control As T, action As Action(Of T)) As IAsyncResult
-
+    <System.Runtime.CompilerServices.Extension>
+    Public Sub InvokeIfRequired(Of T As ISynchronizeInvoke)(ByVal control As T, ByVal action As Action(Of T))
         If control.InvokeRequired Then
-            Try
-
-                Return control.BeginInvoke(
-                    New Action(Of T, Action(Of T))(AddressOf InvokeIfRequired),
-                    New Object() {control, action})
-
-            Catch ex As Exception
-
-                Return Nothing
-
-            End Try
+            control.Invoke(New Action(Sub() action(control)), Nothing)
         Else
-
             action(control)
-            Return Nothing
-
         End If
+    End Sub
 
-    End Function
 End Module
 
